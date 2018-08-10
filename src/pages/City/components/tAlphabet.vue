@@ -64,7 +64,6 @@ export default {
       this.touchStatus = false
     }
   }
-
 }
 </script>
 <style lang="stylus" scoped>
