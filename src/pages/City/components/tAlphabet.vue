@@ -37,8 +37,11 @@ export default {
   },
   updated() {
     // 如果letters 不以A开始，控制台会打印“Cannot read property 'offsetTop' of undefined”
-    let firstLetter = this.letters[0];
-    this.startY = this.$refs[firstLetter][0].offsetTop;
+    // 获取letters没有数据
+    if (this.letters.length > 0) {
+      let firstLetter = this.letters[0];
+      this.startY = this.$refs[firstLetter][0].offsetTop;
+    }
   },
   methods: {
     handleLetterClick(e) {
